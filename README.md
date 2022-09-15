@@ -1,6 +1,6 @@
 # ohmyts
 
-A tool help you to transform backend json data to TypeScript type.
+An automated tool help you to transform backend json data to TypeScript type.
 
 
 # Quick Start
@@ -45,6 +45,20 @@ const App = defineComponent(() => {
     // ...
   )
 })
+```
+for example, if the backend return as below
+
+```json
+{
+  "data": 1
+}
+```
+
+it will create `@types/GET_Search.d.ts` as below
+```ts
+declare interface SearchResponseType {
+  data: number
+}
 ```
 
 #### Options
