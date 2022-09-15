@@ -1,1 +1,1 @@
-# @unocss/core
+# @ohmyts/shared
