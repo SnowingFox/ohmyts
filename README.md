@@ -1,20 +1,20 @@
 # ohmyts
 
-## A tool help you to transform backend json data to TypeScript type.
+A tool help you to transform backend json data to TypeScript type.
 
 
-## Quick Start
+# Quick Start
 
-### Vite
+## Vite
 
-## install
+### install
 ```bash
 npm i @ohmyts/vite -D
 ```
 
-## usage
+### usage
 
-### `vite.config.ts`
+#### `vite.config.ts`
 ```ts
 import { onmytsVite } from '@ohmyts/vite'
 
@@ -31,7 +31,7 @@ export default defineConfig({
 })
 ```
 
-### `app.tsx` for more detail, please go [playground/app.tsx](https://github.com/snowingfox/onmyts/blob/master/packages/playground/src/App.tsx) to check
+#### `app.tsx` for more detail, please go [playground/app.tsx](https://github.com/snowingfox/onmyts/blob/master/packages/playground/src/App.tsx) to check
 ```tsx
 import axios from 'axios'
 import { defineComponent } from 'vue'
@@ -45,7 +45,7 @@ const App = defineComponent(() => {
 })
 ```
 
-### Options
+#### Options
 ```ts
 export interface OhmytsOptions {
   /*
