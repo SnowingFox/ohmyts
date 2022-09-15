@@ -16,7 +16,7 @@ npm i @ohmyts/vite -D
 
 #### `vite.config.ts`
 ```ts
-import { onmytsVite } from '@ohmyts/vite'
+import { ohmytsVite } from '@ohmyts/vite'
 
 const r = (p: string) => resolve(__dirname, p)
 
