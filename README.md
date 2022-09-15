@@ -33,7 +33,7 @@ export default defineConfig({
 })
 ```
 
-#### `app.tsx` for more detail, please go [playground/app.tsx](https://github.com/snowingfox/onmyts/blob/master/packages/playground/src/App.tsx) to check
+#### `app.tsx` for more detail, please go [playground/app.tsx](https://github.com/SnowingFox/ohmyts/blob/master/packages/playground/src/App.tsx) to check
 ```tsx
 import axios from 'axios'
 import { defineComponent } from 'vue'
