@@ -18,6 +18,8 @@ npm i @ohmyts/vite -D
 ```ts
 import { onmytsVite } from '@ohmyts/vite'
 
+const r = (p: string) => resolve(__dirname, p)
+
 export default defineConfig({
   plugins: [
     ohmytsVite({
