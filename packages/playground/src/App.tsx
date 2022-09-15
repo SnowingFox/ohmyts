@@ -3,6 +3,7 @@ import { defineComponent } from 'vue'
 
 const App = defineComponent(() => {
   axios.get('/api/search?keywords=MELANCHOLY')
+  axios.get('/api/comment/music?id=186016&limit=1')
 
   return () => (
     <div>

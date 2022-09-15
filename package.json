@@ -1,6 +1,6 @@
 {
   "name": "ohmyts",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "private": true,
   "scripts": {
     "typecheck": "tsc --noEmit",
@@ -10,26 +10,34 @@
   },
   "author": "snowingfox",
   "license": "MIT",
+  "dependencies": {
+    "@ohmyts/shared": "workspace:*",
+    "@ohmyts/vite": "workspace:*",
+    "http-proxy": "^1.18.1",
+    "json-to-ts": "^1.7.0",
+    "magic-string": "^0.26.2",
+    "unconfig": "^0.3.4",
+    "url-parse": "^1.5.10"
+  },
   "devDependencies": {
     "@antfu/eslint-config": "^0.26.1",
     "@antfu/ni": "^0.17.2",
+    "@ohmyts/vite": "workspace:*",
     "@types/http-proxy": "^1.17.9",
     "@types/node": "^18.7.9",
     "@types/url-parse": "^1.4.8",
-    "@ohmyts/vite": "workspace:*",
     "eslint": "8.0.1",
     "fast-glob": "^3.2.11",
     "fs-extra": "^10.1.0",
     "gzip-size": "^6.0.0",
     "lint-staged": "^13.0.3",
-    "magic-string": "^0.26.2",
     "prettier": "^2.7.1",
     "rollup": "^2.78.1",
     "terser": "^5.14.2",
     "tsup": "^6.2.2",
     "typescript": "^4.7.4",
     "unbuild": "^0.8.9",
-    "url-parse": "^1.5.10",
+    "unconfig": "^0.3.4",
     "vite": "3.0.9",
     "vitest": "^0.22.1"
   }

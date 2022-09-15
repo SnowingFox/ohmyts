@@ -1,6 +1,6 @@
 {
   "name": "@ohmyts/shared",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Proxy request to get response data and transform to TypeScript code.",
   "author": "snowingfox",
   "license": "MIT",

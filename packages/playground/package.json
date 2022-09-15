@@ -1,6 +1,6 @@
 {
-  "name": "vite-project",
-  "version": "0.0.0",
+  "name": "@ohmyts/playground",
+  "version": "0.0.3",
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check build-only",

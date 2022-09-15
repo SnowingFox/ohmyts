@@ -1,4 +1,4 @@
-declare interface ApiSearchResponseType {
+declare interface ApiCommentMusicResponseType {
   isMusician: boolean;
   cnum: number;
   userId: number;
