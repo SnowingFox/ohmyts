@@ -11,6 +11,7 @@ export default defineBuildConfig({
     'magic-string',
     'http-proxy',
     'json-to-ts',
+    'url-parse',
     'vite',
   ],
   rollup: {
