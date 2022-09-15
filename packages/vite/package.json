@@ -1,6 +1,6 @@
 {
   "name": "@ohmyts/vite",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Proxy request to get response data and transform to TypeScript code.",
   "author": "snowingfox",
   "license": "MIT",
@@ -37,13 +37,11 @@
     "build": "unbuild",
     "stub": "unbuild --stub"
   },
-  "dependencies": {
-    "@ohmyts/shared": "workspace:*"
-  },
   "devDependencies": {
     "magic-string": "^0.26.2",
     "unconfig": "^0.3.4",
     "http-proxy": "^1.18.1",
-    "json-to-ts": "^1.7.0"
+    "json-to-ts": "^1.7.0",
+    "@ohmyts/shared": "workspace:*"
   }
 }
