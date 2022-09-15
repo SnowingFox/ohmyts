@@ -1,0 +1,40 @@
+{
+  "name": "@ohmyts/shared",
+  "version": "0.0.1",
+  "description": "Proxy request to get response data and transform to TypeScript code.",
+  "author": "snowingfox",
+  "license": "MIT",
+  "homepage": "https://github.com/snowingfox/ohmyts/tree/main/packages/core#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/snowingfox/onmyts.git",
+    "directory": "packages/core"
+  },
+  "bugs": {
+    "url": "https://github.com/snowingfox/ohmyts/issues"
+  },
+  "keywords": [
+    "ts",
+    "typescript",
+    "json-to-typescript",
+    "json-to-ts"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "stub": "unbuild --stub"
+  }
+}
