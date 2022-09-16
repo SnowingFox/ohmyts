@@ -13,7 +13,7 @@ npm i @ohmyts/vite -D
 ```
 
 ### 🤽playground
-[playground](https://stackblitz.com/edit/vitejs-vite-e1juy2?file=vite.config.ts,src%2FApp.vue,src%2Fmain.ts,node_modules%2Funocss%2Fdist%2Fvite.d.ts,node_modules%2F%40unocss%2Fvite%2Fdist%2Findex.d.ts&terminal=dev)
+[playground](https://stackblitz.com/edit/vitejs-vite-e1juy2?file=vite.config.ts&terminal=dev)
 
 ### usage
 
