@@ -36,7 +36,7 @@ export default defineConfig({
 })
 ```
 
-#### `app.tsx` for more detail, please go [playground](https://github.com/SnowingFox/ohmyts/blob/master/packages/playground) to check
+#### `app.tsx` for more detail, please go [playground](https://stackblitz.com/edit/vitejs-vite-e1juy2?file=vite.config.ts&terminal=dev) to check
 ```tsx
 import axios from 'axios'
 import { defineComponent } from 'vue'
