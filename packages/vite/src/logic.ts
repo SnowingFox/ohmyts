@@ -33,14 +33,15 @@ export const transformJSONToTs = (
     try {
       const json = JSON.parse(Buffer.concat(chunks).toString(encoding))
       const code = new MagicString(JsonToTS(json).toLocaleString().replaceAll('},interface', '}\ninterface'))
+      const typename = name.split('_')
 
-      code.replace('interface RootObject', `${declare ? 'declare' : 'export'} interface ${name.split('_')[1].replace('.d.ts', '')}${suffix}`)
+      code.replace('interface RootObject', `${declare ? 'declare' : 'export'} interface I${typename[0]}${typename[1].replace('.d.ts', '')}${suffix}`)
 
       writeFileSyncRecursive(dir, code.toString())
     }
     catch (err) {
       // eslint-disable-next-line no-console
-      console.log(`[ohmyts Error] ${(err as Error).stack}`)
+      console.log(`[ohmyts Error] ${(err as Error)}`)
     }
   }
 }
