@@ -23,7 +23,7 @@ const r = (p: string) => resolve(__dirname, p)
 export default defineConfig({
   plugins: [
     ohmytsVite({
-      url: '/api',
+      target: '/api',
       rootDir: r('@types'),
       proxyOptions: {
         target: 'https://autumnfish.cn',
@@ -33,7 +33,7 @@ export default defineConfig({
 })
 ```
 
-#### `app.tsx` for more detail, please go [playground/app.tsx](https://github.com/SnowingFox/ohmyts/blob/master/packages/playground/src/App.tsx) to check
+#### `app.tsx` for more detail, please go [playground](https://github.com/SnowingFox/ohmyts/blob/master/packages/playground) to check
 ```tsx
 import axios from 'axios'
 import { defineComponent } from 'vue'
@@ -56,22 +56,43 @@ for example, if the backend return as below
 
 it will create `@types/GET_Search.d.ts` as below
 ```ts
-declare interface SearchResponseType {
+declare interface IGetSearchResponseType {
   data: number
 }
 ```
 
+#### File naming rule
+ `${options.rootDir}/${req.Method}_${pathname(req.url)}`
+
+what is `pathname` function? for example
+
+```ts
+pathname('/api/search?keywords=hello') === 'ApiSearch'
+```
+#### Type naming rule
+
+the rule of type name is `I${pathname(req.Method)}${pathname(req.url)}${options.suffix}`
+
+
+#### Type
+```ts
+import type { Plugin } from 'vite'
+
+declare function ohmytsVite(options: OhmytsOptions | OhmytsOptions[]): Plugin
+```
+
 #### Options
 ```ts
+import type { ServerOptions } from 'http-proxy'
+
 export interface OhmytsOptions {
   /*
   * rewrite url
   */
-  url: string
+  target: string
   /*
   * proxy server options
   *
-  * @default
   */
   proxyOptions: ServerOptions
   /*
@@ -98,5 +119,12 @@ export interface OhmytsOptions {
   * @default true
   */
   overwrite?: boolean
+  /*
+  * use `declare` to decorate type or it will be `export`
+  *
+  * @default true
+  */
+  declare?: boolean
 }
+
 ```
