@@ -1,5 +1,5 @@
 import * as fs from 'fs'
-import type { IncomingMessage } from 'http'
+import type { IncomingMessage, ServerResponse } from 'http'
 import { parseUrl, writeFileSyncRecursive } from '@ohmyts/shared'
 import JsonToTS from 'json-to-ts'
 import MagicString from 'magic-string'
@@ -15,6 +15,7 @@ export const transformJSONToTs = (
     encoding = 'utf-8',
     rootDir = '@types',
     overwrite = true,
+    declare = true,
   } = options
   const name = parseUrl(req)
   let dir = rootDir
@@ -29,11 +30,17 @@ export const transformJSONToTs = (
   const isFileExist = fs.existsSync(dir)
 
   if (overwrite || !isFileExist) {
-    const json = JSON.parse(Buffer.concat(chunks).toString(encoding))
-    const code = new MagicString(JsonToTS(json).toLocaleString().replaceAll('},interface', '}\ninterface'))
+    try {
+      const json = JSON.parse(Buffer.concat(chunks).toString(encoding))
+      const code = new MagicString(JsonToTS(json).toLocaleString().replaceAll('},interface', '}\ninterface'))
 
-    code.replace('interface RootObject', `declare interface ${name.split('_')[1].replace('.d.ts', '')}${suffix}`)
+      code.replace('interface RootObject', `${declare ? 'declare' : 'export'} interface ${name.split('_')[1].replace('.d.ts', '')}${suffix}`)
 
-    writeFileSyncRecursive(dir, code.toString())
+      writeFileSyncRecursive(dir, code.toString())
+    }
+    catch (err) {
+      // eslint-disable-next-line no-console
+      console.log(`[ohmyts Error] ${(err as Error).stack}`)
+    }
   }
 }

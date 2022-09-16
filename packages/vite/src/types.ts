@@ -4,7 +4,7 @@ export interface OhmytsOptions {
   /*
   * rewrite url
   */
-  url: string
+  target: string
   /*
   * proxy server options
   *
@@ -35,4 +35,10 @@ export interface OhmytsOptions {
   * @default true
   */
   overwrite?: boolean
+  /*
+  * use `declare` to decorate type or it will be `export`
+  *
+  * @default true
+  */
+  declare?: boolean
 }

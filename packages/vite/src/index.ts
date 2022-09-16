@@ -4,32 +4,35 @@ import { transformJSONToTs } from './logic'
 import type { OhmytsOptions } from './types'
 
 export function ohmytsVite(
-  options: OhmytsOptions,
+  options: OhmytsOptions | OhmytsOptions[],
 ): Plugin {
   return {
     name: 'ohmyts',
     configureServer(server) {
       return () => {
         const proxy = httpProxy.createProxyServer()
-        server.middlewares.use(options.url, (req, res, next) => {
-          proxy.web(req, res, {
-            changeOrigin: true,
-            ...options.proxyOptions,
-          })
+        if (!Array.isArray(options))
+          options = [options]
 
-          proxy.on('proxyRes', (proxyRes) => {
-            const chunks: Uint8Array[] = []
-            proxyRes.on('data', (chunk) => {
-              chunks.push(chunk)
+        for (const option of options) {
+          server.middlewares.use(option.target, (req, res) => {
+            proxy.web(req, res, {
+              changeOrigin: true,
+              ...option.proxyOptions,
             })
 
-            proxyRes.on('end', () => {
-              transformJSONToTs(req, chunks, options)
+            proxy.on('proxyRes', (proxyRes) => {
+              const chunks: Uint8Array[] = []
+              proxyRes.on('data', (chunk) => {
+                chunks.push(chunk)
+              })
+
+              proxyRes.on('end', () => {
+                transformJSONToTs(req, chunks, option)
+              })
             })
           })
-
-          next()
-        })
+        }
       }
     },
   }
