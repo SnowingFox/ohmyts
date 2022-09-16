@@ -1,6 +1,6 @@
 {
   "name": "@ohmyts/vite",
-  "version": "0.0.3",
+  "version": "0.0.6",
   "description": "Proxy request to get response data and transform to TypeScript code.",
   "author": "snowingfox",
   "license": "MIT",
@@ -36,5 +36,11 @@
   "scripts": {
     "build": "unbuild",
     "stub": "unbuild --stub"
+  },
+  "dependencies": {
+    "http-proxy": "^1.18.1",
+    "json-to-ts": "^1.7.0",
+    "magic-string": "^0.26.2",
+    "url-parse": "^1.5.10"
   }
 }

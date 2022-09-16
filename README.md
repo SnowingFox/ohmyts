@@ -9,7 +9,7 @@ An automated tool help you to transform backend json data to TypeScript type.
 
 ### install
 ```bash
-npm i @ohmyts/vite http-proxy -D
+npm i @ohmyts/vite -D
 ```
 
 ### usage

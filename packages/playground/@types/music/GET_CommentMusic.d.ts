@@ -1,4 +1,4 @@
-declare interface ApiCommentMusicResponseType {
+declare interface CommentMusicResponseType {
   isMusician: boolean;
   cnum: number;
   userId: number;
@@ -48,13 +48,11 @@ interface User4 {
   locationInfo?: any;
   liveInfo?: any;
   anonym: number;
-  commonIdentity?: any;
   userId: number;
-  userType: number;
+  commonIdentity?: any;
   avatarDetail?: any;
+  userType: number;
   avatarUrl: string;
-  experts?: any;
-  vipType: number;
   followed: boolean;
   mutual: boolean;
   remarkName?: any;
@@ -62,18 +60,18 @@ interface User4 {
   nickname: string;
   authStatus: number;
   expertTags?: any;
+  experts?: any;
+  vipType: number;
 }
 interface User3 {
   locationInfo?: any;
   liveInfo?: any;
   anonym: number;
-  commonIdentity?: any;
   userId: number;
-  userType: number;
+  commonIdentity?: any;
   avatarDetail?: any;
+  userType: number;
   avatarUrl: string;
-  experts?: any;
-  vipType: number;
   followed: boolean;
   mutual: boolean;
   remarkName?: any;
@@ -81,6 +79,8 @@ interface User3 {
   nickname: string;
   authStatus: number;
   expertTags?: any;
+  experts?: any;
+  vipType: number;
 }
 interface VipRights {
   associator: Associator;
@@ -128,13 +128,11 @@ interface User2 {
   locationInfo?: any;
   liveInfo?: any;
   anonym: number;
-  commonIdentity?: any;
   userId: number;
-  userType: number;
+  commonIdentity?: any;
   avatarDetail: AvatarDetail;
+  userType: number;
   avatarUrl: string;
-  experts?: any;
-  vipType: number;
   followed: boolean;
   mutual: boolean;
   remarkName?: any;
@@ -142,18 +140,18 @@ interface User2 {
   nickname: string;
   authStatus: number;
   expertTags?: any;
+  experts?: any;
+  vipType: number;
 }
 interface User {
   locationInfo?: any;
   liveInfo?: any;
   anonym: number;
-  commonIdentity?: any;
   userId: number;
-  userType: number;
+  commonIdentity?: any;
   avatarDetail?: AvatarDetail;
+  userType: number;
   avatarUrl: string;
-  experts?: any;
-  vipType: number;
   followed: boolean;
   mutual: boolean;
   remarkName?: any;
@@ -161,6 +159,8 @@ interface User {
   nickname: string;
   authStatus: number;
   expertTags?: any;
+  experts?: any;
+  vipType: number;
 }
 interface VipRight {
   associator?: Associator;

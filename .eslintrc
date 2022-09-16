@@ -1,3 +1,9 @@
 {
-  "extends": ["@antfu"]
+  "extends": ["@antfu"],
+  "overrides": [{
+    "files": "*",
+    "rules": {
+      "react/displayname": ["off"]
+    }
+  }]
 }

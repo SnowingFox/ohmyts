@@ -1,15 +1,15 @@
 {
   "name": "ohmyts",
-  "version": "0.0.3",
+  "version": "0.0.6",
   "private": true,
+  "author": "snowingfox",
+  "license": "MIT",
   "scripts": {
     "typecheck": "tsc --noEmit",
     "test": "vitest",
     "test:update": "vitest -u",
     "build": "pnpm -r build"
   },
-  "author": "snowingfox",
-  "license": "MIT",
   "dependencies": {
     "@ohmyts/shared": "workspace:*",
     "@ohmyts/vite": "workspace:*",

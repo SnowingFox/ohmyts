@@ -11,13 +11,22 @@ const r = (p: string) => resolve(__dirname, p)
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
-    ohmytsVite({
-      url: '/api',
-      rootDir: r('@types'),
-      proxyOptions: {
-        target: 'https://autumnfish.cn',
+    ohmytsVite([
+      {
+        target: '/api',
+        rootDir: r('@types/api'),
+        proxyOptions: {
+          target: 'https://autumnfish.cn',
+        },
       },
-    }),
+      {
+        target: '/music',
+        rootDir: r('@types/music'),
+        proxyOptions: {
+          target: 'https://autumnfish.cn',
+        },
+      },
+    ]),
     vue(), vueJsx()],
   resolve: {
     alias: {
