@@ -1,4 +1,4 @@
-declare interface CommentMusicResponseType {
+declare interface IGETCommentMusicResponseType {
   isMusician: boolean;
   cnum: number;
   userId: number;
@@ -48,11 +48,11 @@ interface User4 {
   locationInfo?: any;
   liveInfo?: any;
   anonym: number;
-  userId: number;
   commonIdentity?: any;
+  avatarUrl: string;
+  userId: number;
   avatarDetail?: any;
   userType: number;
-  avatarUrl: string;
   followed: boolean;
   mutual: boolean;
   remarkName?: any;
@@ -67,11 +67,11 @@ interface User3 {
   locationInfo?: any;
   liveInfo?: any;
   anonym: number;
-  userId: number;
   commonIdentity?: any;
+  avatarUrl: string;
+  userId: number;
   avatarDetail?: any;
   userType: number;
-  avatarUrl: string;
   followed: boolean;
   mutual: boolean;
   remarkName?: any;
@@ -128,11 +128,11 @@ interface User2 {
   locationInfo?: any;
   liveInfo?: any;
   anonym: number;
-  userId: number;
   commonIdentity?: any;
+  avatarUrl: string;
+  userId: number;
   avatarDetail: AvatarDetail;
   userType: number;
-  avatarUrl: string;
   followed: boolean;
   mutual: boolean;
   remarkName?: any;
@@ -147,11 +147,11 @@ interface User {
   locationInfo?: any;
   liveInfo?: any;
   anonym: number;
-  userId: number;
   commonIdentity?: any;
+  avatarUrl: string;
+  userId: number;
   avatarDetail?: AvatarDetail;
   userType: number;
-  avatarUrl: string;
   followed: boolean;
   mutual: boolean;
   remarkName?: any;
