@@ -59,7 +59,7 @@ for example, if the backend return as below
 
 it will create `@types/GET_Search.d.ts` as below
 ```ts
-declare interface IGetSearchResponseType {
+declare interface IGETSearchResponseType {
   data: number
 }
 ```
@@ -74,7 +74,7 @@ pathname('/api/search?keywords=hello') === 'ApiSearch'
 ```
 #### Type naming rule
 
-the rule of type name is `I${pathname(req.Method)}${pathname(req.url)}${options.suffix}`
+the rule of type name is `I${req.Method}${pathname(req.url)}${options.suffix}`
 
 
 #### Type
