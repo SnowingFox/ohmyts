@@ -1,6 +1,6 @@
 {
   "name": "@ohmyts/playground",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check build-only",
@@ -9,6 +9,7 @@
     "type-check": "vue-tsc --noEmit"
   },
   "dependencies": {
+    "@vueuse/core": "^9.2.0",
     "axios": "^0.27.2",
     "pinia": "^2.0.21",
     "vue": "^3.2.38",
