@@ -1,4 +1,4 @@
-declare interface IGETSearchResponseType {
+declare interface IGETUserPlaylistResponseType {
   code: number;
   relatedVideos?: any;
   playlist: Playlist;

@@ -1,4 +1,4 @@
-declare interface IGETCommentMusicResponseType {
+declare interface IGETBannerResponseType {
   isMusician: boolean;
   cnum: number;
   userId: number;

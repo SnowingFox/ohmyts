@@ -27,7 +27,9 @@ export default defineConfig({
         },
       },
     ]),
-    vue(), vueJsx()],
+    vue({
+      reactivityTransform: true,
+    })],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
